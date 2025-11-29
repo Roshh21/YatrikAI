@@ -1,0 +1,123 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    --background: 330 100% 98%;
+    --foreground: 280 20% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 280 20% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 20% 25%;
+    --primary: 330 60% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 330 80% 75%;
+    --secondary: 270 50% 75%;
+    --secondary-foreground: 280 20% 25%;
+    --muted: 330 40% 95%;
+    --muted-foreground: 280 15% 50%;
+    --accent: 270 60% 85%;
+    --accent-foreground: 280 20% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 330 30% 90%;
+    --input: 330 30% 92%;
+    --ring: 330 60% 65%;
+    --chart-1: 330 60% 65%;
+    --chart-2: 270 50% 75%;
+    --chart-3: 300 55% 70%;
+    --chart-4: 340 65% 70%;
+    --chart-5: 280 60% 80%;
+    --sidebar-background: 330 100% 98%;
+    --sidebar-foreground: 280 20% 25%;
+    --sidebar-primary: 330 60% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 40% 95%;
+    --sidebar-accent-foreground: 280 20% 25%;
+    --sidebar-border: 330 30% 90%;
+    --sidebar-ring: 330 60% 65%;
+    --shadow-soft: 330 60% 65% / 0.15;
+    --gradient-primary: linear-gradient(135deg, hsl(330 60% 65%), hsl(330 80% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(270 50% 75%), hsl(270 60% 85%));
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 265 45% 8%;
+    --foreground: 270 20% 92%;
+    --card: 265 40% 12%;
+    --card-foreground: 270 20% 92%;
+    --popover: 265 40% 12%;
+    --popover-foreground: 270 20% 92%;
+    --primary: 275 70% 68%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 75% 75%;
+    --secondary: 260 55% 58%;
+    --secondary-foreground: 270 20% 92%;
+    --muted: 265 35% 16%;
+    --muted-foreground: 270 15% 68%;
+    --accent: 285 60% 55%;
+    --accent-foreground: 270 20% 92%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 265 30% 20%;
+    --input: 265 30% 20%;
+    --ring: 275 70% 68%;
+    --chart-1: 275 70% 68%;
+    --chart-2: 260 55% 58%;
+    --chart-3: 285 60% 62%;
+    --chart-4: 295 65% 65%;
+    --chart-5: 270 60% 70%;
+    --sidebar-background: 265 45% 8%;
+    --sidebar-foreground: 270 20% 92%;
+    --sidebar-primary: 275 70% 68%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 265 35% 16%;
+    --sidebar-accent-foreground: 270 20% 92%;
+    --sidebar-border: 265 30% 20%;
+    --sidebar-ring: 275 70% 68%;
+    --shadow-soft: 275 70% 68% / 0.25;
+    --gradient-primary: linear-gradient(135deg, hsl(275 70% 68%), hsl(280 75% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(260 55% 58%), hsl(285 60% 55%));
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 20px -4px hsl(var(--shadow-soft));
+  }
+
+  .shadow-soft-lg {
+    box-shadow: 0 10px 40px -10px hsl(var(--shadow-soft));
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
